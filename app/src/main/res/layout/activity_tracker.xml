@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tracker"
+    android:background="#000">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tV1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="TRACKER"
+            android:fontFamily="@font/blackhan"
+            android:textColor="#fff"
+            android:textSize="40sp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cV1"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="10dp">
+
+                <org.eazegraph.lib.charts.PieChart
+                    android:id="@+id/pieChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:egLegendTextSize="0sp"
+                    app:egUsePieRotation="true"
+                    app:egValueTextSize="0sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="center"
+                android:id="@+id/cV2"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                app:cardBackgroundColor="#000"
+                app:cardCornerRadius="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:background="#000">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:background="#00b6ff" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="ACTIVE CASES"
+                        android:textColor="#00b6ff" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="33dp"
+                    android:background="#000">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:background="#ff0c00" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="DEATHS"
+                        android:textColor="#ff0c00" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_marginTop="66dp"
+                    android:background="#000">
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:background="#3aff00" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="RECOVERED"
+                        android:textColor="#3aff00" />
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cV3"
+            android:layout_marginTop="50dp"
+            android:layout_width="339dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="30dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
+
+            <com.leo.simplearcloader.SimpleArcLoader
+                android:id="@+id/loader"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                app:arc_speed="medium"
+                app:arc_style="simple_arc"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background= "#f596e7"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp">
+
+                            <TextView
+                                android:paddingStart="3dp"
+                                android:paddingEnd="5dp"
+                                android:background="@drawable/cases"
+                                android:textColor="#000"
+                                android:text="TOTAL CASES : "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:textColor="#000"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:id="@+id/tVCases"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="170dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/cases"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp">
+
+                            <TextView
+                                android:background="@drawable/editround6"
+                                android:text="ACTIVE CASES : "
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:fontFamily="@font/poppins"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:id="@+id/tVActiveCases"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="170dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/editround6"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="DEATHS : "
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/deaths"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tVDeaths"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="170dp"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/deaths"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp">
+
+                            <TextView
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:text="RECOVERED : "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/recovered"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tVRecovered"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="170dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/recovered"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp">
+
+                            <TextView
+                                android:background="@drawable/editround11"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:textColor="#000"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:text="TODAY CASES : "
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:background="@drawable/editround11"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:id="@+id/tVTodayCases"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="170dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp">
+
+                            <TextView
+                                android:text="TODAY DEATHS : "
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/editround5"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tVTodayDeaths"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:layout_marginStart="170dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/editround5"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginBottom="30dp">
+
+                            <TextView
+                                android:text="COUNTRIES : "
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/editround10"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/tVCountries"
+                                android:paddingStart="5dp"
+                                android:paddingEnd="5dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="170dp"
+                                android:layout_marginEnd="20dp"
+                                android:fontFamily="@font/poppins"
+                                android:background="@drawable/editround10"
+                                android:textColor="#000"
+                                android:textSize="20sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <com.ebanx.swipebtn.SwipeButton
+            android:id="@+id/swipe"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="60dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:inner_text_color="#fff"
+            app:inner_text_top_padding="18dp"
+            app:inner_text_bottom_padding="18dp"
+            app:button_bottom_padding="20dp"
+            app:button_top_padding="20dp"
+            app:button_left_padding="22dp"
+            app:button_right_padding="22dp"
+            app:inner_text_size="25sp"
+            app:button_background="@drawable/editround8"
+            app:button_image_disabled="@drawable/ic_baseline_cancel_24"
+            app:button_image_enabled="@drawable/ic_baseline_check_circle_24"
+            app:inner_text="SWIPE FOR MORE"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg5">
+    <TextView
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sick_anim"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="337dp"
+        android:layout_marginEnd="91dp"
+        android:gravity="center"
+        android:text="@string/title5"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/blackhan"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/sick_anim"
+        android:layout_width="364dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="419dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="fever.json"
+        app:lottie_loop="true" />
+
+
+    <TextView
+        android:id="@+id/desc5"
+        android:layout_width="wrap_content"
+        android:layout_height="108dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="399dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="224dp"
+        android:fontFamily="@font/anton"
+        android:gravity="center"
+        android:text="@string/title5desc"
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="249dp"
+        android:layout_alignBottom="@+id/desc2"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="493dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="-253dp"
+        android:fontFamily="@font/aa"
+        android:gravity="center"
+        android:text="@string/title5sub_desc"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+</RelativeLayout>

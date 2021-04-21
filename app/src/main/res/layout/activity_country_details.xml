@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CountryDetails"
+    android:background="@drawable/bg_world">
+
+    <TextView
+        android:id="@+id/tVCountryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="INDIA"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#fff"
+        android:textSize="50sp" />
+
+    <ScrollView
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/editround12"
+        android:layout_width="match_parent"
+        android:layout_height="450dp">
+
+        <LinearLayout
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="450dp">
+
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="TOTAL CASES : "
+                    android:layout_marginStart="30dp"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tVCases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:textColor="#ffc500"
+                    android:text="0"
+                    android:textSize="30sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/editround2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="ACTIVE CASES : "
+                    android:layout_marginStart="30dp"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:textColor="#0097FF"
+                    android:textStyle="bold"
+                    android:id="@+id/tVActiveCases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:background="@drawable/deaths"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="DEATHS : "
+                    android:layout_marginStart="30dp"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:textColor="#ff0000"
+                    android:textStyle="bold"
+                    android:id="@+id/tVDeaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textSize="30sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:background="@drawable/recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="RECOVERED : "
+                    android:layout_marginStart="30dp"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#0fd80f"
+                    android:id="@+id/tVRecovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/editround4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="TODAY CASES : "
+                    android:layout_marginStart="30dp"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:textColor="#da52da"
+                    android:textStyle="bold"
+                    android:id="@+id/tVTodayCases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textSize="30sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:background="@drawable/editround5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="TODAY DEATHS : "
+                    android:layout_marginStart="30dp"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:textColor="#f45538"
+                    android:textStyle="bold"
+                    android:id="@+id/tVTodayDeaths"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textSize="30sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:background="@drawable/editround6"
+                    android:paddingEnd="10dp"
+                    android:paddingStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="FATAL : "
+                    android:layout_marginStart="30dp"
+                    android:textSize="30sp"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#5667d5"
+                    android:id="@+id/tVFatal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="290dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="0"
+                    android:textSize="30sp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/tips_2"
+        android:layout_marginStart="145dp"
+        android:text="TIPS"
+        android:background="@drawable/editround2"
+        android:layout_marginTop="80dp"
+        android:layout_width="120dp"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

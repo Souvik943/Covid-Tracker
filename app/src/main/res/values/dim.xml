@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="dot_height">30dp</dimen>
+    <dimen name="dot_bottom_margin">20dp</dimen>
+    <dimen name="img_width">120dp</dimen>
+    <dimen name="img_height">120dp</dimen>
+    <dimen name="title">50sp</dimen>
+    <dimen name="tile_desc">16sp</dimen>
+    <dimen name="desc_padding">40dp</dimen>
+</resources>
